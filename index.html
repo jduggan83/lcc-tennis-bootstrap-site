@@ -125,13 +125,16 @@
             <span class="icon-next"></span>
         </a>
     </header>
-    <section class="bg-primary" id="latest">
+    <section id="latest">
         <div class="container">
-            <div class="row" id="latest-main-article-container">
-
+            <div class="text-center">
+                <h2 class="section-heading">Latest News</h2>
+                <hr class="primary">
             </div>
-            <div class="row" id="latest-sub-articles-container">
-
+            <div class="row" id="latest-main-article-container" style="padding-bottom: 10px;">
+            </div>
+            <hr class="primary">
+            <div class="row" id="latest-sub-articles-container" style="padding-top: 10px;">
             </div>
         </div>
     </section>
@@ -309,41 +312,55 @@
     <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
     <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
     <script src="vendor/handlebars/handlebars.js"></script>
+    <script src="vendor/moment/moment.js"></script>
 
     <!-- Theme JavaScript -->
     <script src="js/creative.min.js"></script>
     <script id="main-article-template" type="text/x-handlebars-template">
         <div class="col-md-7">
-            <h2>{{story}}</h2>
-            <p>{{message}}</p>
+            <span class="title">{{title}}</span><span class="pull-right">{{time}}</span>
+            <p>{{content}}</p>
         </div>
-        <div class="col-md-5">
-            <img class="img-responsive" src="{{picture}}">
+        <div class="col-md-5" style="padding-top: 20px; padding-right: 50px; padding-left: 50px;">
+            <img class="img-responsive" style="width: 100%; height: 300px;" src="{{picture}}">
         </div>
     </script>
     <script id="sub-article-template" type="text/x-handlebars-template">
-        <div class="col-md-4 text-center">
-            <img class="img-responsive" src="{{picture}}">
-            <h3>{{story}}</h3>
-            <p>{{message}}</p>
+        <div class="col-md-4" style="padding-right: 50px; padding-left: 50px;">
+            <img class="img-responsive"  style="width: 100%; height: 150px;" src="{{picture}}">
+            <span class="title">{{title}}</span><span class="pull-right">{{time}}</span>
+            <p>{{content}}</p>
         </div>
     </script>
     <script>
         $( document ).ready(function() {
-            $.get("https://graph.facebook.com/v2.10/lcctennisclub?access_token=668537306685838%7C4vvOZgjzjmdW-sw8C3TMX6QCyKI&debug=all&fields=feed.limit(4)%7Btype%2Cstory%2Cmessage%2Cpicture%2Cicon%2Clink%7D", function(data, status){
-
-                addArticleToDiv(data.feed.data[0], 'main-article-template', 'latest-main-article-container');
-
-                for(i=1; i<5; i++){
-                    addArticleToDiv(data.feed.data[i], 'sub-article-template', 'latest-sub-articles-container');
+            $.get("https://graph.facebook.com/v2.10/lcctennisclub?fields=feed.limit(10){type,story,message,picture,icon,link,name,created_time}&access_token=668537306685838%7C4vvOZgjzjmdW-sw8C3TMX6QCyKI",
+                function(data, status){
+                    addArticleToDiv(data.feed.data[0], 'main-article-template', 'latest-main-article-container');
+                    for(i=1; i<4; i++){
+                        addArticleToDiv(data.feed.data[i], 'sub-article-template', 'latest-sub-articles-container');
+                    }
                 }
-            });
+            );
         });
 
         function addArticleToDiv(article, templateId, containerId){
+            var context = {};
+            context.content = article.message;
+            context.picture = article.picture;
+
+            if(article.type === 'event'){
+                context.title = article.name;
+            }
+            else{
+                context.title = "LCC News";
+            }
+
+            context.time = moment(article.created_time).fromNow();
+
             var source   = $("#" + templateId).html();
             var template = Handlebars.compile(source);
-            var html    = template(article);
+            var html    = template(context);
             $('#' + containerId).append(html);
         }
 

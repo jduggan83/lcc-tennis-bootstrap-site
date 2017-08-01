@@ -67,6 +67,9 @@ gulp.task('copy', function() {
     gulp.src(['node_modules/handlebars/dist/*.js'])
         .pipe(gulp.dest('vendor/handlebars'))
 
+        gulp.src(['node_modules/moment/moment.js'])
+                .pipe(gulp.dest('vendor/moment'))
+
     gulp.src([
             'node_modules/font-awesome/**',
             '!node_modules/font-awesome/**/*.map',
