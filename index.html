@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Creative - Start Bootstrap Theme</title>
+    <title>LCC Tennis Club</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -21,10 +21,13 @@
 
     <!-- Plugin CSS -->
     <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+    <link href="css/full-slider.css" rel="stylesheet">
 
     <!-- Theme CSS -->
     <link href="css/creative.css" rel="stylesheet">
-    <link href="css/full-slider.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/main.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -316,6 +319,8 @@
 
     <!-- Theme JavaScript -->
     <script src="js/creative.min.js"></script>
+
+    <!-- Handlerbars Templates -->
     <script id="main-article-template" type="text/x-handlebars-template">
         <div class="col-md-7">
             <span class="title">{{title}}</span><span class="pull-right">{{time}}</span>
@@ -332,53 +337,9 @@
             <p>{{content}}</p>
         </div>
     </script>
-    <script>
-        $( document ).ready(function() {
-            $.get("https://graph.facebook.com/v2.10/lcctennisclub?fields=feed.limit(20){type,story,message,picture,icon,link,name,created_time}&access_token=668537306685838%7C4vvOZgjzjmdW-sw8C3TMX6QCyKI",
-                function(data, status){
-                    var articleCount = 0;
-                    var mainArticleAdded = false;
 
-                    for(i=0; articleCount<5; i++){
-                        if(!mainArticleAdded){
-                            if(addArticleToDiv(data.feed.data[0], 'main-article-template', 'latest-main-article-container')){
-                                mainArticleAdded = true;
-                                articleCount++;
-                            }
-                        }
-                        else if(addArticleToDiv(data.feed.data[i], 'sub-article-template', 'latest-sub-articles-container')){
-                            articleCount++;
-                        }
-                    }
-                }
-            );
-        });
-
-        function addArticleToDiv(article, templateId, containerId){
-            var context = {};
-            context.content = article.message;
-            context.picture = article.picture;
-
-            if(article.type === 'status'){
-                return false;
-            }
-            else if(article.type === 'event'){
-                context.title = article.name;
-            }
-            else{
-                context.title = "LCC News";
-            }
-
-            context.time = moment(article.created_time).fromNow();
-            var source   = $("#" + templateId).html();
-            var template = Handlebars.compile(source);
-            var html    = template(context);
-            $('#' + containerId).append(html);
-
-            return true;
-        }
-
-    </script>
+    <!-- Custom JavaScript -->
+    <script src="js/latest-news.js"></script>
 
 </body>
 
