@@ -17,6 +17,6 @@ Styles
 latest - 4 tiles with pics - and a link to the facebook post
 coaching - use pricing table
 social use 2 rows of 2 items - decide on centre align or not - do i need top line?
-join up - an in image on one side and price and download app on the other side
+join up - an in image on one side and price and download app on the other side - or create account example
 court bookings - try paragraph with info in centre - and 2 buttons - one the reverse of the other - bottom of http://spacialtheme.herokuapp.com/2.2/index.html
 facilities - 2 rows, picture on left text on right, vice versa for second row
