@@ -2,16 +2,9 @@ $( document ).ready(function() {
     $.get("https://graph.facebook.com/v2.10/lcctennisclub?fields=feed.limit(20){type,story,message,picture,icon,link,name,created_time}&access_token=668537306685838%7C4vvOZgjzjmdW-sw8C3TMX6QCyKI",
         function(data, status){
             var articleCount = 0;
-            var mainArticleAdded = false;
 
-            for(i=0; articleCount<5; i++){
-                if(!mainArticleAdded){
-                    if(addArticleToDiv(data.feed.data[0], 'main-article-template', 'latest-main-article-container')){
-                        mainArticleAdded = true;
-                        articleCount++;
-                    }
-                }
-                else if(addArticleToDiv(data.feed.data[i], 'sub-article-template', 'latest-sub-articles-container')){
+            for(i=0; articleCount<4; i++){
+                if(addArticleToDiv(data.feed.data[i], 'sub-article-template', 'latest-sub-articles-container')){
                     articleCount++;
                 }
             }
