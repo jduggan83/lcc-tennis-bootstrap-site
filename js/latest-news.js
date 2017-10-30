@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-    $.get("https://graph.facebook.com/v2.10/lcctennisclub?fields=feed.limit(20){type,story,message,picture,icon,link,name,created_time}&access_token=668537306685838%7C4vvOZgjzjmdW-sw8C3TMX6QCyKI",
+    $.get("https://graph.facebook.com/v2.10/lcctennisclub?fields=feed.limit(20){type,story,message,full_picture,icon,link,name,created_time}&access_token=668537306685838%7C4vvOZgjzjmdW-sw8C3TMX6QCyKI",
         function(data, status){
             var articleCount = 0;
 
@@ -15,7 +15,10 @@ $( document ).ready(function() {
 function addArticleToDiv(article, templateId, containerId){
     var context = {};
     context.content = article.message;
-    context.picture = article.picture;
+    context.picture = article.full_picture;
+    if(context.picture == null){
+        context.picture = article.picture;
+    }
 
     if(article.type === 'status'){
         return false;
