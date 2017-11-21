@@ -67,6 +67,9 @@
                         <a class="page-scroll" href="#latest">Latest News</a>
                     </li>
                     <li>
+                        <a class="page-scroll" href="#events">Upcoming Events</a>
+                    </li>
+                    <li>
 						<a class="page-scroll" href="#court-bookings">Court Bookings</a>
                         <!-- <a class="page-scroll" href="http://www.holdmycourt.com/reserve2/lcctennis" target="_blank" >Book A Court</a>-->
                     </li>
@@ -146,7 +149,17 @@
                 <h2 class="section-heading">Latest News</h2>
                 <hr class="primary">
             </div>
-            <div class="row" id="latest-sub-articles-container" style="padding-top: 10px;">
+            <div class="row" id="latest-news-articles-container" style="padding-top: 10px;">
+            </div>
+        </div>
+    </section>
+    <section id="events">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading">Upcoming Events</h2>
+                <hr class="primary">
+            </div>
+            <div class="row" id="events-articles-container" style="padding-top: 10px;">
             </div>
         </div>
     </section>
@@ -233,7 +246,7 @@
             </div>
         </div>
     </section>
-     <!-- Portfolio -->
+     <!-- facilities -->
     <section id="facilities">
         <div class="container">
             <div class="row">
@@ -348,17 +361,24 @@
             <img class="img-responsive" style="width: 100%; height: 300px;" src="{{picture}}">
         </div>
     </script>
-    <script id="sub-article-template" type="text/x-handlebars-template">
+    <script id="news-template" type="text/x-handlebars-template">
+        <div class="col-md-4 col-sm-6">
+            <h4>{{title}}<h4>
+            <h4><small>{{time}}</small><h4>
+            <p style="overflow: wrap;">{{content}}</p>
+        </div>
+    </script>
+
+    <script id="event-template" type="text/x-handlebars-template">
         <div class="col-md-4 col-sm-6">
             <img class="img-responsive"  style="margin-left: auto; margin-right: auto;" src="{{picture}}">
             <h4>{{title}}<h4>
             <h4><small>{{time}}</small><h4>
-            <p style="height: 190px;overflow: hidden;">{{content}}</p>
         </div>
     </script>
-
     <!-- Custom JavaScript -->
     <script src="js/latest-news.js"></script>
+    <script src="js/events.js"></script>
 <script>
     if ('serviceWorker' in navigator) {
     navigator.serviceWorker
