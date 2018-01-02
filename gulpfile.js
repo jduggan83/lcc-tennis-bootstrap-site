@@ -70,6 +70,9 @@ gulp.task('copy', function() {
         gulp.src(['node_modules/moment/moment.js'])
                 .pipe(gulp.dest('vendor/moment'))
 
+     gulp.src(['node_modules/underscore/underscore.js'])
+                     .pipe(gulp.dest('vendor/underscore'))
+
     gulp.src([
             'node_modules/font-awesome/**',
             '!node_modules/font-awesome/**/*.map',
