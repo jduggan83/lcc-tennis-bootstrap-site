@@ -149,7 +149,15 @@
                 <h2 class="section-heading">Latest News</h2>
                 <hr class="primary">
             </div>
-            <div class="row" id="latest-news-articles-container" style="padding-top: 10px;">
+            <div class="row" style="padding-top: 10px;">
+                <div id="news-0"></div>
+                <div id="news-1"></div>
+                <div id="news-2"></div>
+            </div>
+            <div class="row" style="padding-top: 10px;">
+                <div id="news-3"></div>
+                <div id="news-4"></div>
+                <div id="news-5"></div>
             </div>
         </div>
     </section>
@@ -159,7 +167,17 @@
                 <h2 class="section-heading">Upcoming Events</h2>
                 <hr class="primary">
             </div>
-            <div class="row" id="events-articles-container" style="padding-top: 10px;">
+            <div class="row" style="padding-top: 10px;">
+                <div id="event-0"></div>
+                <div id="event-1"></div>
+            </div>
+            <div class="row" style="padding-top: 10px;">
+                <div id="event-2"></div>
+                <div id="event-3"></div>
+            </div>
+            <div class="row" style="padding-top: 10px;">
+                <div id="event-4"></div>
+                <div id="event-5"></div>
             </div>
         </div>
     </section>
@@ -370,10 +388,13 @@
     </script>
 
     <script id="event-template" type="text/x-handlebars-template">
-        <div class="col-md-4 col-sm-6">
+        <div class="col-md-3">
             <img class="img-responsive"  style="margin-left: auto; margin-right: auto;" src="{{picture}}">
-            <h4>{{title}}<h4>
-            <h4><small>{{time}}</small><h4>
+        </div>
+        <div class="col-md-3">
+           <h4>{{title}}<h4>
+                    <h4><small>{{time}}</small><h4>
+                        <p>{{content}}</p>
         </div>
     </script>
     <!-- Custom JavaScript -->
