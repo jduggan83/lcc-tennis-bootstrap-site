@@ -1,7 +1,7 @@
 $( document ).ready(function() {
     $.get("https://graph.facebook.com/v2.10/lcctennisclub/posts?fields=link,created_time,message,story,name,type&access_token=668537306685838%7C4vvOZgjzjmdW-sw8C3TMX6QCyKI",
         function(data, status){
-            for(i=0; i<6; i++){
+            for(i=0; i<3; i++){
                 addEventToDiv(data.data[i], i)
             }
         }
