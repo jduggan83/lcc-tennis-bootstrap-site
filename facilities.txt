@@ -1,0 +1,41 @@
+
+     <!-- facilities -->
+    <section id="facilities">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Facilities</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <h2>First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
+                    <p>LCC offers access to five different sports and a fabulous complex with facilities a bar, a fitness room, function rooms, saunas, and modern comfortable changing rooms.</p>
+                    <p>The LCC bar is run by Ronnie. It is serviced by a full time barmen. Our bar opens each day from 5pm until closing, and often earlier at the weekend if there is something on.</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="img-portfolio img-responsive" src="img/club/IMG_1761.jpg">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5">
+                    <img class="img-portfolio img-responsive" src="img/club/IMG_1783.jpg">
+                </div>
+                <div class="col-md-7">
+                    <h2>First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
+                    <p>A fitness room is available, comprising mainly aerobic equipment, allowing you to stay fit when you're not actually playing tennis (although you should be playing).</p>
+                    <p>There is also a function room, and an indoor hall that can both be booked by members to lay on events for the individual sections.</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+	
+	
+	
+                    <p class="text-faded">LCC are always looking for new members! Play tennis, as well as squash, bowls, cricket, and table-tennis, with a special offer a first year all-sports membership of €25 a month.</p>
+                    <a href="#services" class="page-scroll btn btn-default btn-xl sr-button">Get Application Form</a>
