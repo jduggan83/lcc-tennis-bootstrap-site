@@ -1,0 +1,293 @@
+ Previous Demo Best jQuery
+ Codelab
+Pricing Table Style : Demo 50
+STANDARD
+PER MONTH
+$ 10 99
+50GB Disk Space
+50 Email Accounts
+50GB Monthly Bandwidth
+10 Subdomains
+15 Domains
+Sign Up
+BUSINESS
+PER MONTH
+$ 20 99
+60GB Disk Space
+60 Email Accounts
+60GB Monthly Bandwidth
+15 Subdomains
+20 Domains
+Sign Up
+PREMIUM
+PER MONTH
+$ 30 99
+70GB Disk Space
+70 Email Accounts
+70GB Monthly Bandwidth
+20 Subdomains
+25 Domains
+Sign Up
+
+ HTML
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+<div class="demo">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-6">
+                <div class="pricingTable">
+                    <h3 class="title">Standard</h3>
+                    <div class="price-value">
+                        <span class="month">per month</span>
+                        <span class="amount">
+                            <span class="currency">$</span>
+                            10
+                            <span class="value">99</span>
+                        </span>
+                    </div>
+                    <ul class="pricing-content">
+                        <li>50GB Disk Space</li>
+                        <li>50 Email Accounts</li>
+                        <li>50GB Monthly Bandwidth</li>
+                        <li>10 Subdomains</li>
+                        <li>15 Domains</li>
+                    </ul>
+                    <a href="#" class="pricingTable-signup">sign up</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <div class="pricingTable">
+                    <h3 class="title">Business</h3>
+                    <div class="price-value">
+                        <span class="month">per month</span>
+                        <span class="amount">
+                            <span class="currency">$</span>
+                            20
+                            <span class="value">99</span>
+                        </span>
+                    </div>
+                    <ul class="pricing-content">
+                        <li>60GB Disk Space</li>
+                        <li>60 Email Accounts</li>
+                        <li>60GB Monthly Bandwidth</li>
+                        <li>15 Subdomains</li>
+                        <li>20 Domains</li>
+                    </ul>
+                    <a href="#" class="pricingTable-signup">sign up</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+CSS
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+.demo{ background: #ecedef; }
+.pricingTable{
+    text-align: center;
+    background: #fff;
+    padding: 30px 0;
+}
+.pricingTable .title{
+    font-size: 22px;
+    font-weight: 600;
+    color: #2e282a;
+    text-transform: uppercase;
+    margin: 0 0 30px 0;
+}
+.pricingTable .price-value{
+    padding: 30px 0;
+    background: #ba5289;
+    margin-bottom: 30px;
+    position: relative;
+}
+.pricingTable .price-value:before{
+    content: "";
+    border-top: 15px solid #fff;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    position: absolute;
+    top: 0;
+    left: 46%;
+}
+.pricingTable .month{
+    display: block;
+    font-size: 15px;
+    font-weight: 900;
+    color: #fff;
+    text-transform: uppercase;
+}
+.pricingTable .amount{
+    display: inline-block;
+    font-size: 50px;
+    color: #fff;
+    position: relative;
+}
+.pricingTable .currency{
+    position: absolute;
+    top: -1px;
+    left: -35px;
+}
+.pricingTable .value{
+    font-size: 20px;
+    position: absolute;
+    top: 21px;
+    right: -27px;
+}
+.pricingTable .pricing-content{
+    padding: 0;
+    margin: 0 0 30px 0;
+    list-style: none;
+}
+.pricingTable .pricing-content li{
+    font-size: 16px;
+    color: #868686;
+    line-height: 35px;
+}
+.pricingTable .pricingTable-signup{
+    display: inline-block;
+    padding: 8px 40px;
+    background: #fca4a7;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: capitalize;
+    border: 2px solid #fca4a7;
+    border-radius: 30px;
+    transition: all 0.5s ease 0s;
+}
+.pricingTable .pricingTable-signup:hover{
+    background: #fff;
+    color: #fca4a7;
+}
+@media only screen and (max-width: 990px){
+    .pricingTable{ margin-bottom: 30px; }
+}
