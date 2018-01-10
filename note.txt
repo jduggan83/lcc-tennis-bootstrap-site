@@ -1,0 +1,47 @@
+b4:e6:2a:81:ec:ca
+
+http://dmtn.tv:8080/get.php?username=jduggan83&password=U01Dcj0oxm&type=m3u_plus&output=rtmp
+
+75
+---------
+3 months
+-----
+access to gym
+includes all sports
+---------------
+Join Now
+
+300
+---------
+1st Year
+-----
+access to gym
+includes all sports
+---------------
+Join Now
+
+225
+---------
+Student
+-----
+access to gym
+includes all sports
+---------------
+Join Now
+
+500
+---------
+Family
+-----
+min 3 persons
+min 1 adult
+access to gym
+includes all sports
+---------------
+Join Now
+
+
+https://developers.facebook.com/tools/explorer/145634995501895/?method=GET&path=lcctennisclub%2Fevents&version=v2.11
+https://www.templatemonster.com/demo/59064.html
+https://www.templatemonster.com/demo/59243.html
+http://www.bestjquery.com/lab/pricing-table/page/4/
