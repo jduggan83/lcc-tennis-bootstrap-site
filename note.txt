@@ -1,10 +1,9 @@
 todo
 -----
-investigate different sizes of picture of events, for responsive
-responsiveness on all pieces
-wording for social piece
 get slider to move automatically
-wording 3 slides
+links for member contact details
+clubmanager info
+link on fb post
 
 
 https://developers.facebook.com/tools/explorer/145634995501895/?method=GET&path=lcctennisclub%2Fevents&version=v2.11
