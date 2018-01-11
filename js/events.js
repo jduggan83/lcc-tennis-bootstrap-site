@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-   $.get("https://graph.facebook.com/v2.10/lcctennisclub/events?fields=cover,description,event_times,name&time_filter=upcoming&access_token=668537306685838%7C4vvOZgjzjmdW-sw8C3TMX6QCyKI",
+   $.get("https://graph.facebook.com/v2.10/lcctennisclub/events?fields=id,cover,description,event_times,name&time_filter=upcoming&access_token=668537306685838%7C4vvOZgjzjmdW-sw8C3TMX6QCyKI",
      function(data, status){
             var events = [];
 
@@ -30,7 +30,7 @@ function addArticleToDiv(article, divIndex){
     context.start_time = moment(times[0].start_time).format('h:mma');
     context.end_time = moment(times[0].end_time).format('h:mma');
     context.content = article.description.substring(0,50);
-    context.link = article.link;
+    context.link = "https://www.facebook.com/events/" + article.id;
 
     if(article.cover){
         context.picture = article.cover.source;

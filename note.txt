@@ -4,6 +4,8 @@ get slider to move automatically
 links for member contact details
 clubmanager info
 link on fb post
+lcc icon
+test links in a mobile
 
 
 https://developers.facebook.com/tools/explorer/145634995501895/?method=GET&path=lcctennisclub%2Fevents&version=v2.11
