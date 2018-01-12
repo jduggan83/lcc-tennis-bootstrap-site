@@ -1,10 +1,11 @@
 todo
 -----
-get slider to move automatically
 links for member contact details
 clubmanager info
 link on fb post
 lcc icon
+do we need facilities description - how many courts etc
+media query style for slider
 test links in a mobile
 
 
