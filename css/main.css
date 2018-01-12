@@ -19,6 +19,22 @@ section {
     overflow: wrap;
 }
 
+.news-column{
+    padding-left: 8px;
+    padding-right: 8px
+}
+
+.news-item{
+    background-color: #fff;
+    padding: 5px;
+    border-bottom: 2px solid #F05F40;
+    margin-bottom: 10px;
+}
+
+.social-container{
+   padding-bottom: 30px;
+}
+
 .event-item{
     background-color: #fff;
     height: 200px;

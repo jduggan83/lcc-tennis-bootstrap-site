@@ -68,10 +68,13 @@
                         <a class="page-scroll" href="#latest">Latest News</a>
                     </li>
                     <li>
+                        <a class="page-scroll" href="#social">Get Involved</a>
+                    </li>
+                    <li>
                         <a class="page-scroll" href="#events">LCC This Week</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#social">Social</a>
+                        <a class="page-scroll" href="#facilities">Facilities</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#court-bookings">Court Bookings</a>
@@ -141,7 +144,7 @@
             <span class="icon-next"></span>
         </a>
     </header>
-    <section id="latest">
+    <section id="latest" class="bg-grey">
         <div class="container">
             <div class="text-center">
                 <h2 class="section-heading">Latest News</h2>
@@ -154,10 +157,47 @@
                 <div id="news-3"></div>
             </div>
             <div class="row">
-                <div class="col-xs-12"><a href="https://www.facebook.com/lcctennisclub" target="_blank" class="pull-right">See more news</a></div>
+                <div class="col-xs-12"><a href="https://www.facebook.com/lcctennisclub" target="_blank" class="pull-right">See all news >></a></div>
             </div>
         </div>
     </section>
+    <section id="social">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Get Involved</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+        </div>
+        <div class="container text-center social-container">
+            <div class="row">
+                <div class="col-sm-6 col-md-4">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-users text-primary sr-icons"></i>
+                        <h3>Thursday Night Social Tennis</h3>
+                        <p class="text-muted">Social night runs every thursday night from 7:30pm sharp.</p>
+                        <p class="text-muted">If you are thinking of joining up, come along on a Thursday night to see what the club is like.</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-trophy text-primary sr-icons"></i>
+                        <h3>Box Leagues and Ladders</h3>
+                        <p class="text-muted">LCC run active ladders in all tennis disciplines throughout the year. Doubles and Singles box leagues are held each Spring, Summer, and Autumn.</p>
+                        <p class="text-muted">These internal competitions are a great way to practice and meet new members.</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-sm-offset-3 col-md-offset-0">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-whatsapp text-primary sr-icons"></i>
+                        <h3>WhatsApp Groups</h3>
+                        <p class="text-muted">Looking for somebody to play? Try one of our WhatsApp hitting groups, for an easy way to find somebody to practice with.</p>
+                        <p class="text-muted">To be added to a group, please send an email to lcc.sports.tennis@gmail.com.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     <section id="events" class="bg-grey">
         <div class="container">
             <div class="text-center">
@@ -173,44 +213,21 @@
                 <div id="event-3" class="col-md-6"></div>
             </div>
             <div class="row">
-                <div class="col-xs-12"><a href="https://www.facebook.com/lcctennisclub/events" class="pull-right" target="_blank">See full calendar</a></div>
+                <div class="col-xs-12"><a href="https://www.facebook.com/lcctennisclub/events" class="pull-right" target="_blank">See full calendar >></a></div>
             </div>
         </div>
     </section>
-    <section id="social">
+    <section id="facilities">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Social</h2>
+                    <h2 class="section-heading">Facilities</h2>
                     <hr class="primary">
                 </div>
             </div>
         </div>
         <div class="container text-center">
             <div class="row">
-                <div class="col-sm-6">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-users text-primary sr-icons"></i>
-                        <h3>Thursday Night Social Tennis</h3>
-                        <p class="text-muted">Social night runs every thursday night from 7:30pm sharp. If you are thinking of joining up, come along on a Thursday night to see what the club is like.</p>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-trophy text-primary sr-icons"></i>
-                        <h3>Box Leagues and Ladders</h3>
-                        <p class="text-muted">LCC run active ladders in all tennis disciplines throughout the year. Doubles and Singles box leagues are held each Spring, Summer, and Autumn. These internal competitions are a great way to practice and meet new members.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-whatsapp text-primary sr-icons"></i>
-                        <h3>WhatsApp Groups</h3>
-                        <p class="text-muted">Looking for somebody to play? Try one of our WhatsApp hitting groups, for an easy way to find somebody to practice with. To be added to a group, please send an email to lcc.sports.tennis@gmail.com.</p>
-                    </div>
-                </div>
                 <div class="col-sm-6">
                     <div class="service-box">
                         <i class="fa fa-4x fa-building text-primary sr-icons"></i>
@@ -442,10 +459,12 @@
 
     <!-- Handlerbars Templates -->
     <script id="news-template" type="text/x-handlebars-template">
-        <div class="col-md-3 col-sm-6">
-            <h4>{{title}}</h4>
-            <h4><small>{{time}}</small><h4>
-            <p class="news-content">{{content}}</p>
+        <div class="col-md-3 col-sm-6 news-column">
+            <div class="news-item">
+                <h4>{{title}}</h4>
+                <h4><small>{{time}}</small><h4>
+                <p class="news-content">{{content}}</p>
+            </div>
         </div>
     </script>
 
