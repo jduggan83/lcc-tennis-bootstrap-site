@@ -4,13 +4,19 @@ $( document ).ready(function() {
             var events = [];
 
             for(var i=0; i<data.data.length; i++){
-                addArticleToDiv(data.data[data.data.length -1 - i], i);
+                events.push(createEvent(data.data[i]));
+            }
+
+            events = _.sortBy(events, 'start_date');
+
+            for(var i=0; i < 4; i++){
+                addArticleToDiv(events[i], i);
             }
         }
   );
 });
 
-function addArticleToDiv(article, divIndex){
+function createEvent(article){
     var today = new Date();
     today.setHours(0,0,0,0);
 
@@ -26,6 +32,7 @@ function addArticleToDiv(article, divIndex){
 
     context.title = article.name;
     var times = _.sortBy(future_times, 'start_time');
+    context.start_date = times[0].start_time;
     context.date = moment(times[0].start_time).format('dddd, MMMM Do');
     context.start_time = moment(times[0].start_time).format('h:mma');
     context.end_time = moment(times[0].end_time).format('h:mma');
@@ -36,6 +43,10 @@ function addArticleToDiv(article, divIndex){
         context.picture = article.cover.source;
     }
 
+    return context;
+}
+
+function addArticleToDiv(context, divIndex){
     var source   = $("#event-template").html();
     var template = Handlebars.compile(source);
     var html    = template(context);

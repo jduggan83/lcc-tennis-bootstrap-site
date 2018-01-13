@@ -37,7 +37,6 @@ section {
 
 .event-item{
     background-color: #fff;
-    height: 200px;
     padding-top: 5px;
     padding-bottom: 5px;
     margin-top: 10px;
@@ -55,20 +54,4 @@ section {
 .event-image{
     margin-left: auto;
     margin-right: auto;
-}
-
-@media (min-width: 768px) {
-  .event-item {
-    height: 200px;
-  }
-}
-@media (min-width: 992px) {
-  .event-item {
-      height: 175px;
-    }
-}
-@media (min-width: 1200px) {
-  .event-item {
-      height: 188px;
-    }
 }
