@@ -36,7 +36,10 @@ function createEvent(article){
     context.date = moment(times[0].start_time).format('dddd, MMMM Do');
     context.start_time = moment(times[0].start_time).format('h:mma');
     context.end_time = moment(times[0].end_time).format('h:mma');
-    context.content = article.description.substring(0,50);
+
+    if(article.description != null){
+        context.content = article.description.substring(0,50);
+    }
     context.link = "https://www.facebook.com/events/" + article.id;
 
     if(article.cover){
