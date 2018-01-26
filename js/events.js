@@ -24,18 +24,22 @@ function createEvent(article){
 
     var future_times = [];
 
-    for(var i=0; i< article.event_times.length; i++){
-        if(Date.parse(article.event_times[i].start_time) > _.now()){
-            future_times.push(article.event_times[i])
+    if(article.event_times != null){
+        for(var i=0; i< article.event_times.length; i++){
+            if(Date.parse(article.event_times[i].start_time) > _.now()){
+                future_times.push(article.event_times[i])
+            }
         }
-    }
+
+        var times = _.sortBy(future_times, 'start_time');
+        context.start_date = times[0].start_time;
+        context.date = moment(times[0].start_time).format('dddd, MMMM Do');
+        context.start_time = moment(times[0].start_time).format('h:mma');
+        context.end_time = moment(times[0].end_time).format('h:mma');
+     }
 
     context.title = article.name;
-    var times = _.sortBy(future_times, 'start_time');
-    context.start_date = times[0].start_time;
-    context.date = moment(times[0].start_time).format('dddd, MMMM Do');
-    context.start_time = moment(times[0].start_time).format('h:mma');
-    context.end_time = moment(times[0].end_time).format('h:mma');
+
 
     if(article.description != null){
         context.content = article.description.substring(0,50);
