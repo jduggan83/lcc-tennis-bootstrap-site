@@ -541,6 +541,9 @@
                 <h4>{{title}}</h4>
                 <h4><small>{{time}}</small><h4>
                 <p class="news-content">{{content}}</p>
+                {{#if link}}
+                    <p><a href="{{link}}" target="_blank">More Details >></a></p>
+                {{/if}}
             </div>
         </div>
     </script>

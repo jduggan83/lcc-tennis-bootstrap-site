@@ -19,13 +19,14 @@ function addEventToDiv(article, index){
     if(article.type === 'status'){
         context.title = "LCC News";
     }
-    else if(article.type === 'event' && article.message == null){
-        context.content = article.description;
-        context.link = "https://www.facebook.com/events/" + article.id;
+    else if(article.type === 'event'){
+        if(article.message == null){
+            context.content = article.description;
+        }
+        context.link = article.link;
     }
     else if(article.type === 'link'){
         context.content = context.content.replace(article.link, '');
-        context.link = article.link;
     }
 
     context.time = moment(article.created_time).fromNow();
