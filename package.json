@@ -23,7 +23,7 @@
     "scrollreveal": "^3.1.4",
     "handlebars": "^4.0.10",
     "moment": "^2.18.1",
-    "underscore": "^1.8.3"
+    "underscore": "^1.12.1"
   },
   "repository": {
     "type": "git",
